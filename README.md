@@ -9,6 +9,17 @@
 Biblio-Tech/
 ├── assets/
 │   └── icons/
+│       ├── cadastrar-livro.png
+│       ├── cadastro.png
+│       ├── empréstimo.png
+│       ├── livros.png
+│       ├── logo_bibliotech.PNG
+│       ├── logo_home.png
+│       ├── lupa.png
+│       ├── sair.png
+│       ├── setinha_verde.png
+│       ├── setinha.png
+│       └── usuarios.png
 ├── css/
 │   └── style.css
 ├── js/

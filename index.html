@@ -1,13 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css">   
-    <title>Biblio-Tech</title>
-</head>
+    <title>Biblio-Tech - Página Inicial</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>   
+
+
 <body>
-    <h1>Hello World</h1>
+    <div class="container-principal">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">📚</span>
+                    <h1>Biblio-Tech</h1>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main layout: Sidebar + Conteúdo -->
+        <div class="layout">
+            <!-- Navegação Lateral -->
+            <nav class="sidebar">
+
+                <button class="btn-sair">Sair</button>
+            </nav>
+
+            <!-- Conteúdo Principal -->
+            <main class="conteudo-principal">
+                <section class="pagina-inicio">
+                    <!-- Título da página -->
+                    <div class="titulo-secao">
+                        <h2>Início</h2>
+                        <p class="subtitulo">Bem-vindo a sua Biblio-Tech!</p>
+                    </div>
+
+                    <!-- Cards de Métricas -->
+                    <section class="cards-metricas">
+                        <article class="card">
+                            <div class="card-icon">📖</div>
+                            <div class="card-numero" id="total-livros">0</div>
+                            <div class="card-label">Livros Cadastrados</div>
+                        </article>
+
+                        <article class="card">
+                            <div class="card-icon">↔️</div>
+                            <div class="card-numero" id="emprestimos-ativos">0</div>
+                            <div class="card-label">Empréstimos Ativos</div>
+                        </article>
+
+                        <article class="card">
+                            <div class="card-icon">👥</div>
+                            <div class="card-numero" id="total-usuarios">0</div>
+                            <div class="card-label">Usuários Cadastrados</div>
+                        </article>
+                    </section>
+
+                    <!-- Tabela de Empréstimos Recentes -->
+                    <section class="emprestimos-recentes">
+                        <h3>Empréstimos Recentes</h3>
+                        <table class="tabela-emprestimos">
+                            <thead>
+                                <tr>
+                                    <th>Livro</th>
+                                    <th>Usuário</th>
+                                    <th>Data Empréstimo</th>
+                                    <th>Data Devolução</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="corpo-tabela-emprestimos">
+                                <!-- Dados serão inseridos via JavaScript -->
+                            </tbody>
+                        </table>
+                    </section>
+                </section>
+            </main>
+        </div>
+    </div>
+
     <script src="js/script.js"></script>
 </body>
 </html>

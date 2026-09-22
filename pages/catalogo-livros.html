@@ -1,11 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Biblio-Tech - Catálogo de Livros</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    
+    <div class="container-principal">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">📚</span>
+                    <h1>Biblio-Tech</h1>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main layout: Sidebar + Conteúdo -->
+        <div class="layout">
+            <!-- Navegação Lateral -->
+            <nav class="sidebar">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link ativo"><img src="../assets/icons/logo_home.png" alt="home" class="home-icon">Início</a></li>
+                    <li><a href="pages/catalogo-livros.html" class="nav-link"><img src="../assets/icons/livros.png" alt="livros" class="livros">Livros</a></li>
+                    <li><a href="pages/consulta.html" class="nav-link"><img src="../assets/icons/setinha.png" alt="setinha" class="setinha">Consulta</a></li>
+                    <li><a href="pages/usuarios-cadastrados.html" class="nav-link"><img src="../assets/icons/usuarios.png" alt="users" class="users-icon">Usuários</a></li>
+                    <li><a href="pages/cadastro-usuarios.html" class="nav-link"><img src="../assets/icons/cadastro.png" alt="Cadastro User" class="cad-user-icon">Cadastrar Usuário</a></li>
+                    <li><a href="pages/emprestimos.html" class="nav-link"><img src="../assets/icons/empréstimo.png" alt="emprestimo" class="emprestimo-icon">Emprestar Livro</a></li>
+                    <li><a href="pages/cadastro-livros.html" class="nav-link"><img src="../assets/icons/cadastrar-livro.png" alt="cad-livro" class="cad-ivro-icon">Cadastrar Livro</a></li>
+                    <li><a href="pages/devolucao.html" class="nav-link"><img src="../assets/icons/setinha_verde.png" alt="devolver-icon" class="devolver-icon">Devolver Livro</a></li>
+                </ul>
+                <button class="btn-sair">Sair</button>
+            </nav>
+
+            <!-- Conteúdo Principal -->
+            <main class="conteudo-principal">
+                <section class="pagina-catalogo">
+                    <!-- Título da página -->
+                    <div class="titulo-secao">
+                        <h2>Catálogo de Livros</h2>
+                        <p class="subtitulo">Pesquise os livros disponíveis</p>
+                    </div>
+
+                    <!-- Filtros e Busca -->
+                    <div class="filtros-container">
+                        <div class="filtro-pesquisa">
+                            <input 
+                                type="text" 
+                                id="input-busca" 
+                                class="input-pesquisa" 
+                                placeholder="Busca por título, autor ou ISBN"
+                            >
+                        </div>
+
+                        <div class="filtro-dropdown">
+                            <button class="btn-dropdown" id="btn-categoria">
+                                Todas as categorias
+                                <span class="dropdown-icon">▼</span>
+                            </button>
+                            <div class="dropdown-menu" id="menu-categoria">
+                                <a href="#" class="dropdown-item" data-categoria="todas">Todas as categorias</a>
+                                <a href="#" class="dropdown-item" data-categoria="romance">Romance</a>
+                                <a href="#" class="dropdown-item" data-categoria="classicos">Clássicos</a>
+                                <a href="#" class="dropdown-item" data-categoria="ficcao">Ficção</a>
+                                <a href="#" class="dropdown-item" data-categoria="historia">História</a>
+                                <a href="#" class="dropdown-item" data-categoria="tecnico">Técnico</a>
+                            </div>
+                        </div>
+
+                        <div class="filtro-dropdown">
+                            <button class="btn-dropdown" id="btn-disponibilidade">
+                                Disponibilidade
+                                <span class="dropdown-icon">▼</span>
+                            </button>
+                            <div class="dropdown-menu" id="menu-disponibilidade">
+                                <a href="#" class="dropdown-item" data-disponibilidade="todas">Todas</a>
+                                <a href="#" class="dropdown-item" data-disponibilidade="disponivel">Disponível</a>
+                                <a href="#" class="dropdown-item" data-disponibilidade="indisponivel">Indisponível</a>
+                            </div>
+                        </div>
+
+                        <button class="btn-buscar">Buscar</button>
+                    </div>
+
+                    <hr class="divisor">
+
+                    <!-- Tabela de Resultados -->
+                    <div class="tabela-container">
+                        <table class="tabela-livros">
+                            <thead>
+                                <tr>
+                                    <th>Título</th>
+                                    <th>Autor</th>
+                                    <th>Categoria</th>
+                                    <th>Ano</th>
+                                    <th>Disponibilidade</th>
+                                </tr>
+                            </thead>
+                            <tbody id="corpo-tabela-livros">
+                                <!-- Dados serão inseridos via JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Paginação -->
+                    <div class="paginacao-container">
+                        <button class="btn-paginacao" id="btn-anterior">
+                            <
+                        </button>
+                        <div class="numeros-paginas" id="numeros-pagina">
+                            <!-- Números de página serão inseridos via JavaScript -->
+                        </div>
+                        <button class="btn-paginacao" id="btn-proxima">
+                            >
+                        </button>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
 </body>
 </html>

@@ -1,8 +1,1203 @@
-*, *::before, *::after {
-  box-sizing: border-box;
+/* =========================================================
+   BIBLIO-TECH
+   Estilos gerais
+   ========================================================= */
+
+/* ---------- Reset ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
 }
 
 body {
-  margin: 0;
-  font-family: system-ui, -apple-system, sans-serif; /* Exemplo de fonte padrão */
-}   
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7fa;
+    color: #17233c;
+}
+
+
+/* =========================================================
+   ESTRUTURA PRINCIPAL
+   ========================================================= */
+
+.container-principal {
+    min-height: 100vh;
+}
+
+/* =========================================================
+   HEADER / LOGO
+   ========================================================= */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 226px;
+    height: 90px;
+
+    background-color: #ffffff;
+
+    border-right: 1px solid #cfd3d8;
+    border-bottom: 1px solid #e1e4e8;
+
+    z-index: 100;
+}
+
+.header-content {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-icon {
+    font-size: 28px;
+    line-height: 1;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111111;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   LAYOUT
+   ========================================================= */
+
+.layout {
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sidebar {
+    position: fixed;
+
+    top: 90px;
+    left: 0;
+    bottom: 0;
+
+    width: 226px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #ffffff;
+
+    border-right: 1px solid #cfd3d8;
+
+    padding: 10px 0 20px;
+
+    z-index: 90;
+}
+
+
+/* ---------- Menu ---------- */
+
+.nav-menu {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.nav-menu li {
+   padding: 0;
+   margin: 0;
+}
+
+.nav-link {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 42px;
+
+    padding: 10px 16px;
+
+    gap: 30px;
+
+    color: #1b2943;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.nav-link img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0; /* Evita que o ícone encolha */
+}
+
+/*
+   Os emojis do HTML ficam antes do texto.
+   Este espaçamento ajuda a manter a aparência
+   semelhante à imagem de referência.
+*/
+
+.nav-link::first-letter {
+    font-size: 20px;
+}
+
+
+/* ---------- Hover ---------- */
+
+.nav-link:hover {
+    background-color: #f1f4f7;
+    color: #111c31;
+}
+
+
+/* ---------- Item ativo ---------- */
+
+.nav-link.ativo {
+    background-color: #f5f7fa;
+    color: #17233c;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   BOTÃO SAIR
+   ========================================================= */
+
+.btn-sair {
+    margin-top: auto;
+
+    width: 100%;
+
+    padding: 12px 20px 12px 70px;
+
+    border: none;
+    background-color: transparent;
+
+    color: #17233c;
+
+    font-family: inherit;
+    font-size: 14px;
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.btn-sair:hover {
+    background-color: #f1f4f7;
+    color: #111111;
+}
+
+
+/* =========================================================
+   CONTEÚDO PRINCIPAL
+   ========================================================= */
+
+.conteudo-principal {
+    margin-left: 226px;
+
+    min-height: 100vh;
+
+    padding: 48px 21px 30px;
+}
+
+
+/* =========================================================
+   TÍTULO DA PÁGINA
+   ========================================================= */
+
+.titulo-secao {
+    margin-bottom: 35px;
+}
+
+.titulo-secao h2 {
+    margin-bottom: 10px;
+
+    color: #111111;
+
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.subtitulo {
+    color: #17233c;
+
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   CARDS DE MÉTRICAS
+   ========================================================= */
+
+.cards-metricas {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 7px;
+
+    width: 100%;
+
+    margin-bottom: 8px;
+}
+
+.card {
+    min-height: 134px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #bfc3c8;
+    border-radius: 5px;
+
+    padding: 14px 22px;
+
+    display: grid;
+
+    grid-template-columns: 65px 1fr;
+    grid-template-rows: auto auto;
+
+    column-gap: 8px;
+    align-items: center;
+
+    position: relative;
+}
+
+
+/* ---------- Ícone ---------- */
+
+.card-icon {
+    grid-column: 1;
+    grid-row: 1 / 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 45px;
+    line-height: 1;
+}
+
+
+/* ---------- Número ---------- */
+
+.card-numero {
+    grid-column: 2;
+    grid-row: 1 / 3;
+
+    color: #050505;
+
+    font-size: 28px;
+    font-weight: 700;
+}
+
+
+/*
+   O label é mantido no HTML, mas na imagem de referência
+   o título do card aparece acima do número.
+
+   Como o HTML atual coloca o número e depois o label,
+   fazemos uma pequena adaptação usando posicionamento.
+*/
+
+.card-label {
+    position: absolute;
+
+    top: 15px;
+    left: 22px;
+
+    color: #17233c;
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   TABELA DE EMPRÉSTIMOS
+   ========================================================= */
+
+.emprestimos-recentes {
+    width: 100%;
+
+    background-color: #ffffff;
+
+    border: 1px solid #bfc3c8;
+    border-radius: 5px;
+
+    padding: 0 10px 10px;
+}
+
+
+/* ---------- Título ---------- */
+
+.emprestimos-recentes h3 {
+    padding: 6px 0 8px;
+
+    color: #17233c;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+/* ---------- Tabela ---------- */
+
+.tabela-emprestimos {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    table-layout: fixed;
+}
+
+
+/* ---------- Cabeçalho ---------- */
+
+.tabela-emprestimos thead th {
+    padding: 7px 5px 9px;
+
+    color: #17233c;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-align: center;
+
+    border-bottom: 1px solid #cfd3d8;
+}
+
+
+/* ---------- Células ---------- */
+
+.tabela-emprestimos tbody td {
+    padding: 10px 5px;
+
+    color: #17233c;
+
+    font-size: 12px;
+    line-height: 1.45;
+
+    text-align: center;
+
+    vertical-align: middle;
+}
+
+
+/* ---------- Primeira coluna ---------- */
+
+.tabela-emprestimos th:first-child,
+.tabela-emprestimos td:first-child {
+    text-align: left;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+/*
+   Como os status são provavelmente inseridos
+   pelo JavaScript dentro das células, estas classes
+   podem ser utilizadas pelo seu script:
+   
+   <span class="status ativo">Ativo</span>
+   <span class="status devolvido">Devolvido</span>
+*/
+
+.status {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 57px;
+
+    padding: 4px 11px;
+
+    border-radius: 9px;
+
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.status.ativo {
+    background-color: #c8f7d0;
+    color: #234f2c;
+}
+
+.status.devolvido {
+    background-color: #dedede;
+    color: #26334a;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+/* ---------- Tablets ---------- */
+
+@media (max-width: 900px) {
+
+    .header {
+        width: 190px;
+    }
+
+    .sidebar {
+        width: 190px;
+    }
+
+    .conteudo-principal {
+        margin-left: 190px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .nav-link,
+    .btn-sair {
+        padding-left: 55px;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    .cards-metricas {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .card {
+        min-height: 110px;
+    }
+}
+
+
+/* ---------- Celulares ---------- */
+
+@media (max-width: 650px) {
+
+    .header {
+        position: relative;
+
+        width: 100%;
+        height: 70px;
+
+        border-right: none;
+    }
+
+    .header-content {
+        justify-content: center;
+    }
+
+    .sidebar {
+        position: relative;
+
+        top: auto;
+        bottom: auto;
+
+        width: 100%;
+        height: auto;
+
+        border-right: none;
+        border-bottom: 1px solid #cfd3d8;
+
+        padding: 5px 0;
+    }
+
+    .nav-menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-link {
+        min-height: 40px;
+
+        padding: 8px 10px;
+
+        justify-content: center;
+        text-align: center;
+    }
+
+    .btn-sair {
+        margin-top: 5px;
+
+        padding: 10px;
+
+        text-align: center;
+    }
+
+    .conteudo-principal {
+        margin-left: 0;
+
+        padding: 30px 12px;
+    }
+
+    .titulo-secao {
+        margin-bottom: 25px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 26px;
+    }
+
+    .subtitulo {
+        font-size: 14px;
+    }
+
+    .cards-metricas {
+        grid-template-columns: 1fr;
+    }
+
+    .emprestimos-recentes {
+        overflow-x: auto;
+    }
+
+    .tabela-emprestimos {
+        min-width: 650px;
+    }
+}
+
+/* =========================================================
+   BIBLIO-TECH — CATÁLOGO DE LIVROS
+   Estilos para a página de catálogo
+   ========================================================= */
+
+
+/* =========================================================
+   PÁGINA CATÁLOGO
+   ========================================================= */
+
+.pagina-catalogo {
+    width: 100%;
+}
+
+
+/* =========================================================
+   TÍTULO E SUBTÍTULO
+   ========================================================= */
+
+.titulo-secao {
+    margin-bottom: 35px;
+}
+
+.titulo-secao h2 {
+    margin-bottom: 10px;
+
+    color: #111111;
+
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.subtitulo {
+    color: #17233c;
+
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   FILTROS E BUSCA
+   ========================================================= */
+
+.filtros-container {
+    background-color: #ffffff;
+
+    border: 1px solid #bfc3c8;
+    border-radius: 5px;
+
+    padding: 15px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    align-items: flex-end;
+}
+
+
+/* ---------- Grupo de Filtros ---------- */
+
+.filtro-pesquisa {
+    flex: 1;
+    min-width: 300px;
+}
+
+.filtro-dropdown {
+    position: relative;
+    flex: 0 1 auto;
+    min-width: 200px;
+}
+
+
+/* ---------- Input de Pesquisa ---------- */
+
+.input-pesquisa {
+    width: 100%;
+
+    padding: 10px 12px;
+
+    border: 1px solid #bfc3c8;
+    border-radius: 5px;
+
+    background-color: #ffffff;
+    color: #17233c;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+    transition: all 0.2s ease;
+}
+
+.input-pesquisa::placeholder {
+    color: #8a92a6;
+}
+
+.input-pesquisa:focus {
+    outline: none;
+    border-color: #111111;
+    box-shadow: 0 0 0 2px rgba(17, 17, 17, 0.1);
+}
+
+
+/* ---------- Botão Dropdown ---------- */
+
+.btn-dropdown {
+    width: 100%;
+
+    padding: 10px 12px;
+
+    background-color: #ffffff;
+    color: #17233c;
+
+    border: 1px solid #bfc3c8;
+    border-radius: 5px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    transition: all 0.2s ease;
+
+    position: relative;
+}
+
+.btn-dropdown:hover {
+    border-color: #111111;
+    background-color: #f5f7fa;
+}
+
+.btn-dropdown.ativo {
+    border-color: #111111;
+    background-color: #f5f7fa;
+}
+
+.dropdown-icon {
+    font-size: 12px;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+.btn-dropdown.ativo .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+
+/* ---------- Menu Dropdown ---------- */
+
+.dropdown-menu {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    background-color: #ffffff;
+
+    border: 1px solid #bfc3c8;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+    display: none;
+    flex-direction: column;
+
+    z-index: 50;
+
+    margin-top: -1px;
+}
+
+.dropdown-menu.ativo {
+    display: flex;
+}
+
+.dropdown-item {
+    padding: 10px 12px;
+
+    color: #17233c;
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: all 0.2s ease;
+
+    border-bottom: 1px solid #f0f0f0;
+
+    cursor: pointer;
+
+    display: block;
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.dropdown-item:hover {
+    background-color: #f5f7fa;
+    color: #111111;
+    padding-left: 15px;
+}
+
+.dropdown-item.selecionado {
+    background-color: #f5f7fa;
+    color: #111111;
+    font-weight: 500;
+}
+
+
+/* ---------- Botão Buscar ---------- */
+
+.btn-buscar {
+    padding: 10px 24px;
+
+    background-color: #17233c;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 5px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+    white-space: nowrap;
+
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-buscar:hover {
+    background-color: #0f1820;
+}
+
+.btn-buscar:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================================================
+   DIVISOR
+   ========================================================= */
+
+.divisor {
+    border: none;
+    border-top: 1px solid #bfc3c8;
+    margin: 20px 0;
+}
+
+
+/* =========================================================
+   TABELA DE LIVROS
+   ========================================================= */
+
+.tabela-container {
+    background-color: #ffffff;
+
+    border: 1px solid #bfc3c8;
+    border-radius: 5px;
+
+    padding: 10px;
+
+    margin-bottom: 20px;
+
+    overflow-x: auto;
+}
+
+.tabela-livros {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    table-layout: fixed;
+}
+
+
+/* ---------- Cabeçalho ---------- */
+
+.tabela-livros thead {
+    background-color: #f5f7fa;
+}
+
+.tabela-livros th {
+    padding: 10px 8px;
+
+    color: #17233c;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-align: center;
+
+    border-bottom: 1px solid #bfc3c8;
+}
+
+.tabela-livros th:first-child {
+    text-align: left;
+}
+
+
+/* ---------- Células ---------- */
+
+.tabela-livros tbody td {
+    padding: 12px 8px;
+
+    color: #17233c;
+
+    font-size: 13px;
+    line-height: 1.4;
+
+    text-align: center;
+
+    border-bottom: 1px solid #e5e8ed;
+}
+
+.tabela-livros tbody td:first-child {
+    text-align: left;
+}
+
+
+/* ---------- Hover nas Linhas ---------- */
+
+.tabela-livros tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+
+/* ---------- Status de Disponibilidade ---------- */
+
+.badge-disponivel {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 80px;
+
+    padding: 4px 10px;
+
+    background-color: #c8f7d0;
+    color: #234f2c;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-indisponivel {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 80px;
+
+    padding: 4px 10px;
+
+    background-color: #dedede;
+    color: #26334a;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   MENSAGEM DE VAZIO
+   ========================================================= */
+
+.mensagem-vazia {
+    text-align: center;
+
+    padding: 40px;
+
+    color: #8a92a6;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   PAGINAÇÃO
+   ========================================================= */
+
+.paginacao-container {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 20px;
+}
+
+
+/* ---------- Botões de Navegação ---------- */
+
+.btn-paginacao {
+    width: 36px;
+    height: 36px;
+
+    background-color: #ffffff;
+    color: #17233c;
+
+    border: 1px solid #bfc3c8;
+    border-radius: 5px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.2s ease;
+}
+
+.btn-paginacao:hover:not(:disabled) {
+    border-color: #111111;
+    background-color: #f5f7fa;
+}
+
+.btn-paginacao:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* ---------- Números de Página ---------- */
+
+.numeros-paginas {
+    display: flex;
+    gap: 4px;
+}
+
+.numero-pagina {
+    min-width: 36px;
+    height: 36px;
+
+    background-color: #ffffff;
+    color: #17233c;
+
+    border: 1px solid #bfc3c8;
+    border-radius: 5px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.2s ease;
+}
+
+.numero-pagina:hover {
+    border-color: #111111;
+    background-color: #f5f7fa;
+}
+
+.numero-pagina.ativo {
+    background-color: #17233c;
+    color: #ffffff;
+    border-color: #17233c;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+/* ---------- Tablets (900px) ---------- */
+
+@media (max-width: 900px) {
+
+    .filtros-container {
+        flex-direction: column;
+        align-items: stretch;
+
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .filtro-pesquisa {
+        min-width: 100%;
+    }
+
+    .filtro-dropdown {
+        min-width: 100%;
+    }
+
+    .btn-buscar {
+        width: 100%;
+    }
+
+    .tabela-livros {
+        font-size: 12px;
+    }
+
+    .tabela-livros th,
+    .tabela-livros td {
+        padding: 8px 5px;
+    }
+}
+
+
+/* ---------- Celulares (650px) ---------- */
+
+@media (max-width: 650px) {
+
+    .titulo-secao {
+        margin-bottom: 25px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 26px;
+    }
+
+    .subtitulo {
+        font-size: 14px;
+    }
+
+    .filtros-container {
+        flex-direction: column;
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .filtro-pesquisa,
+    .filtro-dropdown {
+        min-width: 100%;
+    }
+
+    .btn-buscar {
+        width: 100%;
+    }
+
+    .input-pesquisa,
+    .btn-dropdown,
+    .btn-buscar {
+        font-size: 13px;
+        padding: 9px 10px;
+    }
+
+    .tabela-container {
+        padding: 8px;
+        overflow-x: auto;
+    }
+
+    .tabela-livros {
+        font-size: 11px;
+        min-width: 600px;
+    }
+
+    .tabela-livros th,
+    .tabela-livros td {
+        padding: 6px 4px;
+    }
+
+    .badge-disponivel,
+    .badge-indisponivel {
+        min-width: 70px;
+        padding: 3px 6px;
+        font-size: 11px;
+    }
+
+    .paginacao-container {
+        gap: 6px;
+        margin-top: 15px;
+    }
+
+    .btn-paginacao,
+    .numero-pagina {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+}

@@ -1,11 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Relatórios - Biblio-Tech</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Estilos para Relatórios */
+        .relatorio-secao {
+            margin-bottom: 30px;
+        }
+
+        .titulo-relatorio {
+            margin-bottom: 20px;
+            color: #111111;
+            font-size: 20px;
+            font-weight: 700;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container-principal">
+        <!-- HEADER / LOGO -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">📚</span>
+                    <h1>Biblioteca Web</h1>
+                </div>
+            </div>
+        </header>
+
+        <!-- LAYOUT PRINCIPAL -->
+        <div class="layout">
+            <!-- SIDEBAR -->
+            <nav class="sidebar">
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="nav-link ativo"><img src="../assets/icons/logo_home.png" alt="home" class="home-icon">Início</a></li>
+                    <li><a href="catalogo-livros.html" class="nav-link"><img src="../assets/icons/livros.png" alt="livros" class="livros">Livros</a></li>
+                    <li><a href="consulta.html" class="nav-link"><img src="../assets/icons/setinha.png" alt="setinha" class="setinha">Consulta</a></li>
+                    <li><a href="usuarios-cadastrados.html" class="nav-link"><img src="../assets/icons/usuarios.png" alt="users" class="users-icon">Usuários</a></li>
+                    <li><a href="cadastro-usuarios.html" class="nav-link"><img src="../assets/icons/cadastro.png" alt="Cadastro User" class="cad-user-icon">Cadastrar Usuário</a></li>
+                    <li><a href="emprestimos.html" class="nav-link"><img src="../assets/icons/empréstimo.png" alt="emprestimo" class="emprestimo-icon">Emprestar Livro</a></li>
+                    <li><a href="cadastro-livros.html" class="nav-link"><img src="../assets/icons/cadastrar-livro.png" alt="cad-livro" class="cad-ivro-icon">Cadastrar Livro</a></li>
+                    <li><a href="devolucao.html" class="nav-link"><img src="../assets/icons/setinha_verde.png" alt="devolver-icon" class="devolver-icon">Devolver Livro</a></li>
+                </ul>
+                <button class="btn-sair">Sair</button>
+            </nav>
+
+            <!-- CONTEÚDO PRINCIPAL -->
+            <main class="conteudo-principal">
+                <!-- TÍTULO DA PÁGINA -->
+                <section class="titulo-secao">
+                    <h2>Relatórios</h2>
+                    <p class="subtitulo">Visualize as estatísticas da biblioteca</p>
+                </section>
+
+                <!-- RELATÓRIO GERAL -->
+                <section class="relatorio-secao">
+                    <h3 class="titulo-relatorio">Relatório Geral</h3>
+
+                    <!-- CARDS DE MÉTRICAS -->
+                    <div class="cards-metricas">
+                        <div class="card">
+                            <div class="card-icon">📖</div>
+                            <div class="card-numero">37</div>
+                            <div class="card-label">Total de Empréstimos</div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-icon">↔️</div>
+                            <div class="card-numero">18</div>
+                            <div class="card-label">Usuários Ativos</div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-icon" style="color: #d32f2f;">⏰</div>
+                            <div class="card-numero" style="color: #d32f2f;">12</div>
+                            <div class="card-label">Atrasos Registrados</div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
 </body>
 </html>

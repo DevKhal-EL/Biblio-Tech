@@ -1,10 +1,3 @@
-/* =========================================================
-   BIBLIO-TECH
-   Estilos gerais
-   ========================================================= */
-
-/* ---------- Reset ---------- */
-
 * {
     margin: 0;
     padding: 0;
@@ -155,8 +148,8 @@ body {
 }
 
 .nav-link img {
-    width: 20px;
-    height: 20px;
+    width: 26px;
+    height: 26px;
     object-fit: contain;
     display: block;
     flex-shrink: 0; /* Evita que o ícone encolha */
@@ -467,133 +460,6 @@ body {
     color: #26334a;
 }
 
-
-/* =========================================================
-   RESPONSIVIDADE
-   ========================================================= */
-
-/* ---------- Tablets ---------- */
-
-@media (max-width: 900px) {
-
-    .header {
-        width: 190px;
-    }
-
-    .sidebar {
-        width: 190px;
-    }
-
-    .conteudo-principal {
-        margin-left: 190px;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    .nav-link,
-    .btn-sair {
-        padding-left: 55px;
-    }
-
-    .logo h1 {
-        font-size: 20px;
-    }
-
-    .cards-metricas {
-        grid-template-columns: 1fr;
-        gap: 8px;
-    }
-
-    .card {
-        min-height: 110px;
-    }
-}
-
-
-/* ---------- Celulares ---------- */
-
-@media (max-width: 650px) {
-
-    .header {
-        position: relative;
-
-        width: 100%;
-        height: 70px;
-
-        border-right: none;
-    }
-
-    .header-content {
-        justify-content: center;
-    }
-
-    .sidebar {
-        position: relative;
-
-        top: auto;
-        bottom: auto;
-
-        width: 100%;
-        height: auto;
-
-        border-right: none;
-        border-bottom: 1px solid #cfd3d8;
-
-        padding: 5px 0;
-    }
-
-    .nav-menu {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .nav-link {
-        min-height: 40px;
-
-        padding: 8px 10px;
-
-        justify-content: center;
-        text-align: center;
-    }
-
-    .btn-sair {
-        margin-top: 5px;
-
-        padding: 10px;
-
-        text-align: center;
-    }
-
-    .conteudo-principal {
-        margin-left: 0;
-
-        padding: 30px 12px;
-    }
-
-    .titulo-secao {
-        margin-bottom: 25px;
-    }
-
-    .titulo-secao h2 {
-        font-size: 26px;
-    }
-
-    .subtitulo {
-        font-size: 14px;
-    }
-
-    .cards-metricas {
-        grid-template-columns: 1fr;
-    }
-
-    .emprestimos-recentes {
-        overflow-x: auto;
-    }
-
-    .tabela-emprestimos {
-        min-width: 650px;
-    }
-}
 
 /* =========================================================
    BIBLIO-TECH — CATÁLOGO DE LIVROS
@@ -1091,12 +957,1798 @@ body {
 
 
 /* =========================================================
+   PÁGINA DE RELATÓRIOS E CONSULTAS
+   ========================================================= */
+
+/* ---------- Seção de Relatório ---------- */
+
+.relatorio-secao {
+    margin-bottom: 40px;
+}
+
+.titulo-relatorio {
+    margin-bottom: 20px;
+
+    color: #17233c;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+/* ---------- Cards de Métricas (Relatório) ---------- */
+
+.cards-metricas-relatorio {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+
+    width: 100%;
+
+    margin-bottom: 20px;
+}
+
+.card-relatorio {
+    min-height: 150px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #bfc3c8;
+    border-radius: 8px;
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transition: all 0.2s ease;
+}
+
+.card-relatorio:hover {
+    border-color: #111111;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ---------- Header do Card ---------- */
+
+.card-header-relatorio {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+}
+
+.card-icon-relatorio {
+    font-size: 32px;
+    line-height: 1;
+}
+
+.card-label-relatorio {
+    color: #17233c;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    line-height: 1.2;
+}
+
+
+/* ---------- Número do Card ---------- */
+
+.card-numero-relatorio,
+.card-numero-relatorio-destaque {
+    color: #050505;
+
+    font-size: 36px;
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+.card-numero-relatorio-destaque {
+    color: #e74c3c;
+}
+
+/* =========================================================
+   BIBLIO-TECH — USUÁRIOS CADASTRADOS
+   Estilos para a página de usuários
+   ========================================================= */
+
+
+/* =========================================================
+   PÁGINA USUÁRIOS
+   ========================================================= */
+
+.pagina-usuarios {
+    width: 100%;
+}
+
+
+/* =========================================================
+   FILTRO E BUSCA DE USUÁRIOS
+   ========================================================= */
+
+.filtro-usuarios {
+    background-color: #ffffff;
+
+    border: 1px solid #bfc3c8;
+    border-radius: 5px;
+
+    padding: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ---------- Container do Filtro ---------- */
+
+.filtro-usuarios-container {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+
+/* ---------- Input de Pesquisa ---------- */
+
+.input-pesquisa-usuarios-wrapper {
+    position: relative;
+    flex: 1;
+    min-width: 300px;
+}
+
+.icon-pesquisa {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    font-size: 16px;
+    color: #8a92a6;
+
+    pointer-events: none;
+}
+
+.input-pesquisa-usuarios {
+    width: 100%;
+
+    padding: 10px 12px 10px 40px;
+
+    border: 1px solid #bfc3c8;
+    border-radius: 5px;
+
+    background-color: #ffffff;
+    color: #17233c;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+    transition: all 0.2s ease;
+}
+
+.input-pesquisa-usuarios::placeholder {
+    color: #8a92a6;
+}
+
+.input-pesquisa-usuarios:focus {
+    outline: none;
+    border-color: #111111;
+    box-shadow: 0 0 0 2px rgba(17, 17, 17, 0.1);
+}
+
+
+/* ---------- Botão Buscar ---------- */
+
+.btn-buscar-usuarios {
+    padding: 10px 24px;
+
+    background-color: #17233c;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 5px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+    white-space: nowrap;
+
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-buscar-usuarios:hover {
+    background-color: #0f1820;
+}
+
+.btn-buscar-usuarios:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================================================
+   TABELA DE USUÁRIOS
+   ========================================================= */
+
+.tabela-usuarios-container {
+    background-color: #ffffff;
+
+    border: 1px solid #bfc3c8;
+    border-radius: 5px;
+
+    padding: 10px;
+
+    margin-bottom: 20px;
+
+    overflow-x: auto;
+}
+
+.tabela-usuarios {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    table-layout: auto;
+}
+
+
+/* ---------- Cabeçalho ---------- */
+
+.tabela-usuarios thead {
+    background-color: #f5f7fa;
+}
+
+.tabela-usuarios th {
+    padding: 10px 8px;
+
+    color: #17233c;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-align: left;
+
+    border-bottom: 1px solid #bfc3c8;
+}
+
+
+/* ---------- Células ---------- */
+
+.tabela-usuarios tbody td {
+    padding: 12px 8px;
+
+    color: #17233c;
+
+    font-size: 13px;
+    line-height: 1.4;
+
+    text-align: left;
+
+    border-bottom: 1px solid #e5e8ed;
+}
+
+
+/* ---------- Hover nas Linhas ---------- */
+
+.tabela-usuarios tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+
+/* =========================================================
+   PAGINAÇÃO DE USUÁRIOS
+   ========================================================= */
+
+.paginacao-usuarios {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 20px;
+}
+
+
+/* ---------- Botões de Navegação ---------- */
+
+.btn-paginacao-usuarios {
+    width: 36px;
+    height: 36px;
+
+    background-color: #ffffff;
+    color: #17233c;
+
+    border: 1px solid #bfc3c8;
+    border-radius: 5px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.2s ease;
+}
+
+.btn-paginacao-usuarios:hover:not(:disabled) {
+    border-color: #111111;
+    background-color: #f5f7fa;
+}
+
+.btn-paginacao-usuarios:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* ---------- Números de Página ---------- */
+
+.numeros-pagina-usuarios {
+    display: flex;
+    gap: 4px;
+}
+
+.numero-pagina-usuarios {
+    min-width: 36px;
+    height: 36px;
+
+    background-color: #ffffff;
+    color: #17233c;
+
+    border: 1px solid #bfc3c8;
+    border-radius: 5px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.2s ease;
+}
+
+.numero-pagina-usuarios:hover {
+    border-color: #111111;
+    background-color: #f5f7fa;
+}
+
+.numero-pagina-usuarios.ativo {
+    background-color: #17233c;
+    color: #ffffff;
+    border-color: #17233c;
+}
+
+
+/* =========================================================
+   MENSAGEM DE VAZIO
+   ========================================================= */
+
+.mensagem-vazia-usuarios {
+    text-align: center;
+
+    padding: 40px;
+
+    color: #8a92a6;
+
+    font-size: 16px;
+}
+
+/* =========================================================
+   BIBLIO-TECH — CADASTRAR USUÁRIO
+   Estilos para a página de cadastro de usuários
+   ========================================================= */
+
+
+/* =========================================================
+   PÁGINA CADASTRO USUÁRIOS
+   ========================================================= */
+
+.pagina-cadastro-usuarios {
+    width: 100%;
+
+    max-width: 600px;
+}
+
+
+/* =========================================================
+   FORMULÁRIO
+   ========================================================= */
+
+.formulario-cadastro-usuarios {
+    background-color: #ffffff;
+
+    border: 1px solid #bfc3c8;
+    border-radius: 5px;
+
+    padding: 30px;
+
+    margin-top: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* ---------- Grupo do Formulário ---------- */
+
+.grupo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+/* ---------- Label ---------- */
+
+.label-formulario {
+    color: #17233c;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+/* ---------- Input ---------- */
+
+.input-formulario {
+    padding: 12px;
+
+    border: 1px solid #bfc3c8;
+    border-radius: 5px;
+
+    background-color: #ffffff;
+    color: #17233c;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+    transition: all 0.2s ease;
+
+    min-height: 42px;
+}
+
+.input-formulario::placeholder {
+    color: #8a92a6;
+}
+
+.input-formulario:focus {
+    outline: none;
+    border-color: #111111;
+    box-shadow: 0 0 0 2px rgba(17, 17, 17, 0.1);
+}
+
+.input-formulario:invalid:not(:placeholder-shown) {
+    border-color: #e74c3c;
+}
+
+.input-formulario:valid:not(:placeholder-shown) {
+    border-color: #27ae60;
+}
+
+
+/* ---------- Botão Cadastrar ---------- */
+
+.btn-cadastrar-usuarios {
+    padding: 12px 24px;
+
+    background-color: #17233c;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 5px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+    white-space: nowrap;
+
+    min-height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 10px;
+}
+
+.btn-cadastrar-usuarios:hover {
+    background-color: #0f1820;
+}
+
+.btn-cadastrar-usuarios:active {
+    transform: scale(0.98);
+}
+
+.btn-cadastrar-usuarios:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   MENSAGEM DE FEEDBACK
+   ========================================================= */
+
+.mensagem-feedback {
+    padding: 12px 15px;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    margin-top: 15px;
+
+    border-left: 4px solid;
+
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mensagem-feedback.sucesso {
+    background-color: #d4edda;
+    color: #234f2c;
+    border-left-color: #27ae60;
+}
+
+.mensagem-feedback.erro {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-left-color: #e74c3c;
+}
+
+.mensagem-feedback.aviso {
+    background-color: #fff3cd;
+    color: #856404;
+    border-left-color: #f39c12;
+}
+
+/* =========================================================
+   BIBLIO-TECH — EMPRESTAR LIVRO
+   Estilos para a página de empréstimo de livros
+   ========================================================= */
+
+
+/* =========================================================
+   PÁGINA EMPRESTAR LIVRO
+   ========================================================= */
+
+.pagina-emprestar-livro {
+    width: 100%;
+
+    max-width: 900px;
+}
+
+
+/* =========================================================
+   FORMULÁRIO
+   ========================================================= */
+
+.formulario-emprestar-livro {
+    background-color: #ffffff;
+
+    border: 1px solid #bfc3c8;
+    border-radius: 5px;
+
+    padding: 30px;
+
+    margin-top: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+
+/* ---------- Linha do Formulário ---------- */
+
+.linha-formulario {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.linha-formulario.linha-final {
+    gap: 20px;
+    align-items: flex-end;
+}
+
+
+/* ---------- Grupo do Formulário ---------- */
+
+.grupo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.linha-final .grupo-formulario {
+    flex: 1;
+}
+
+
+/* ---------- Label ---------- */
+
+.label-formulario {
+    color: #17233c;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+/* ---------- Input ---------- */
+
+.input-formulario {
+    padding: 12px;
+
+    border: 1px solid #bfc3c8;
+    border-radius: 5px;
+
+    background-color: #ffffff;
+    color: #17233c;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+    transition: all 0.2s ease;
+
+    min-height: 42px;
+
+    width: 100%;
+}
+
+.input-formulario::placeholder {
+    color: #8a92a6;
+}
+
+.input-formulario:focus {
+    outline: none;
+    border-color: #111111;
+    box-shadow: 0 0 0 2px rgba(17, 17, 17, 0.1);
+}
+
+.input-formulario:invalid:not(:placeholder-shown) {
+    border-color: #e74c3c;
+}
+
+.input-formulario:valid:not(:placeholder-shown) {
+    border-color: #27ae60;
+}
+
+
+/* ---------- Botão Emprestar ---------- */
+
+.btn-emprestar-livro {
+    padding: 12px 24px;
+
+    background-color: #17233c;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 5px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+    white-space: nowrap;
+
+    min-height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.btn-emprestar-livro:hover {
+    background-color: #0f1820;
+}
+
+.btn-emprestar-livro:active {
+    transform: scale(0.98);
+}
+
+.btn-emprestar-livro:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   MENSAGEM DE FEEDBACK
+   ========================================================= */
+
+.mensagem-feedback {
+    padding: 12px 15px;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    margin-top: 15px;
+
+    border-left: 4px solid;
+
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mensagem-feedback.sucesso {
+    background-color: #d4edda;
+    color: #234f2c;
+    border-left-color: #27ae60;
+}
+
+.mensagem-feedback.erro {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-left-color: #e74c3c;
+}
+
+.mensagem-feedback.aviso {
+    background-color: #fff3cd;
+    color: #856404;
+    border-left-color: #f39c12;
+}
+
+/* =========================================================
+   BIBLIO-TECH — CADASTRAR LIVRO
+   Estilos para a página de cadastro de livros
+   ========================================================= */
+
+
+/* =========================================================
+   PÁGINA CADASTRO LIVRO
+   ========================================================= */
+
+.pagina-cadastro-livro {
+    width: 100%;
+
+    max-width: 900px;
+}
+
+
+/* =========================================================
+   FORMULÁRIO
+   ========================================================= */
+
+.formulario-cadastro-livro {
+    background-color: #ffffff;
+
+    border: 1px solid #bfc3c8;
+    border-radius: 5px;
+
+    padding: 30px;
+
+    margin-top: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+
+/* ---------- Linha do Formulário ---------- */
+
+.linha-formulario {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.linha-formulario.linha-sinopse {
+    grid-template-columns: 1fr;
+}
+
+.linha-formulario.linha-final {
+    gap: 20px;
+    align-items: flex-end;
+}
+
+
+/* ---------- Grupo do Formulário ---------- */
+
+.grupo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.grupo-sinopse {
+    gap: 8px;
+}
+
+.linha-final .grupo-formulario {
+    flex: 1;
+}
+
+
+/* ---------- Label ---------- */
+
+.label-formulario {
+    color: #17233c;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+/* ---------- Input ---------- */
+
+.input-formulario {
+    padding: 12px;
+
+    border: 1px solid #bfc3c8;
+    border-radius: 5px;
+
+    background-color: #ffffff;
+    color: #17233c;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+    transition: all 0.2s ease;
+
+    min-height: 42px;
+
+    width: 100%;
+}
+
+.input-formulario::placeholder {
+    color: #8a92a6;
+}
+
+.input-formulario:focus {
+    outline: none;
+    border-color: #111111;
+    box-shadow: 0 0 0 2px rgba(17, 17, 17, 0.1);
+}
+
+.input-formulario:invalid:not(:placeholder-shown) {
+    border-color: #e74c3c;
+}
+
+.input-formulario:valid:not(:placeholder-shown) {
+    border-color: #27ae60;
+}
+
+
+/* ---------- Textarea (Sinopse) ---------- */
+
+.input-textarea {
+    min-height: 120px;
+
+    padding: 12px;
+
+    resize: vertical;
+
+    line-height: 1.5;
+}
+
+
+/* ---------- Botão Cadastrar ---------- */
+
+.btn-cadastrar-livro {
+    padding: 12px 24px;
+
+    background-color: #17233c;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 5px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+    white-space: nowrap;
+
+    min-height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.btn-cadastrar-livro:hover {
+    background-color: #0f1820;
+}
+
+.btn-cadastrar-livro:active {
+    transform: scale(0.98);
+}
+
+.btn-cadastrar-livro:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   MENSAGEM DE FEEDBACK
+   ========================================================= */
+
+.mensagem-feedback {
+    padding: 12px 15px;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    margin-top: 15px;
+
+    border-left: 4px solid;
+
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mensagem-feedback.sucesso {
+    background-color: #d4edda;
+    color: #234f2c;
+    border-left-color: #27ae60;
+}
+
+.mensagem-feedback.erro {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-left-color: #e74c3c;
+}
+
+.mensagem-feedback.aviso {
+    background-color: #fff3cd;
+    color: #856404;
+    border-left-color: #f39c12;
+}
+
+/* =========================================================
+   BIBLIO-TECH — DEVOLVER LIVRO
+   Estilos para a página de devolução de livros
+   ========================================================= */
+
+
+/* =========================================================
+   PÁGINA DEVOLUÇÃO
+   ========================================================= */
+
+.pagina-devolucao {
+    width: 100%;
+
+    max-width: 900px;
+}
+
+
+/* =========================================================
+   DIVISOR DA PÁGINA
+   ========================================================= */
+
+.divisor-pagina {
+    border: none;
+    border-top: 1px solid #bfc3c8;
+    margin: 20px 0;
+}
+
+
+/* =========================================================
+   FORMULÁRIO
+   ========================================================= */
+
+.formulario-devolucao {
+    background-color: transparent;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    margin-top: 30px;
+}
+
+
+/* ---------- Linha do Formulário ---------- */
+
+.linha-formulario-devolucao {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.linha-formulario-devolucao.linha-devolucao-final {
+    gap: 20px;
+    align-items: flex-end;
+}
+
+
+/* ---------- Grupo do Formulário ---------- */
+
+.grupo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.linha-devolucao-final .grupo-formulario {
+    flex: 1;
+}
+
+
+/* ---------- Label ---------- */
+
+.label-formulario {
+    color: #17233c;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+/* ---------- Input ---------- */
+
+.input-formulario {
+    padding: 12px;
+
+    border: 1px solid #bfc3c8;
+    border-radius: 5px;
+
+    background-color: #ffffff;
+    color: #17233c;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+    transition: all 0.2s ease;
+
+    min-height: 42px;
+
+    width: 100%;
+}
+
+.input-formulario::placeholder {
+    color: #8a92a6;
+}
+
+.input-formulario:focus {
+    outline: none;
+    border-color: #111111;
+    box-shadow: 0 0 0 2px rgba(17, 17, 17, 0.1);
+}
+
+.input-formulario:invalid:not(:placeholder-shown) {
+    border-color: #e74c3c;
+}
+
+.input-formulario:valid:not(:placeholder-shown) {
+    border-color: #27ae60;
+}
+
+
+/* ---------- Botão Devolver ---------- */
+
+.btn-devolver-livro {
+    padding: 12px 24px;
+
+    background-color: #17233c;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 5px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+    white-space: nowrap;
+
+    min-height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.btn-devolver-livro:hover {
+    background-color: #0f1820;
+}
+
+.btn-devolver-livro:active {
+    transform: scale(0.98);
+}
+
+.btn-devolver-livro:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   MENSAGEM DE FEEDBACK
+   ========================================================= */
+
+.mensagem-feedback {
+    padding: 12px 15px;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    margin-top: 15px;
+
+    border-left: 4px solid;
+
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mensagem-feedback.sucesso {
+    background-color: #d4edda;
+    color: #234f2c;
+    border-left-color: #27ae60;
+}
+
+.mensagem-feedback.erro {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-left-color: #e74c3c;
+}
+
+.mensagem-feedback.aviso {
+    background-color: #fff3cd;
+    color: #856404;
+    border-left-color: #f39c12;
+}
+
+
+/* =========================================================
    RESPONSIVIDADE
    ========================================================= */
 
 /* ---------- Tablets (900px) ---------- */
 
 @media (max-width: 900px) {
+
+    .pagina-devolucao {
+        max-width: 100%;
+    }
+
+    .formulario-devolucao {
+        gap: 20px;
+    }
+
+    .linha-formulario-devolucao {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .linha-devolucao-final {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-devolver-livro {
+        grid-column: auto;
+    }
+
+    .input-formulario {
+        font-size: 13px;
+        padding: 11px;
+    }
+}
+
+
+/* ---------- Celulares (650px) ---------- */
+
+@media (max-width: 650px) {
+
+    .titulo-secao {
+        margin-bottom: 25px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 26px;
+    }
+
+    .subtitulo {
+        font-size: 14px;
+    }
+
+    .pagina-devolucao {
+        max-width: 100%;
+    }
+
+    .divisor-pagina {
+        margin: 15px 0;
+    }
+
+    .formulario-devolucao {
+        gap: 16px;
+        margin-top: 20px;
+    }
+
+    .linha-formulario-devolucao {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .linha-devolucao-final {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        align-items: stretch;
+    }
+
+    .btn-devolver-livro {
+        width: 100%;
+    }
+
+    .label-formulario {
+        font-size: 13px;
+    }
+
+    .input-formulario {
+        font-size: 13px;
+        padding: 10px;
+        min-height: 40px;
+    }
+
+    .btn-devolver-livro {
+        font-size: 13px;
+        padding: 10px 20px;
+        min-height: 40px;
+    }
+
+    .mensagem-feedback {
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+}
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+/* ---------- Tablets (900px) ---------- */
+
+@media (max-width: 900px) {
+
+    .pagina-cadastro-livro {
+        max-width: 100%;
+    }
+
+    .formulario-cadastro-livro {
+        padding: 25px;
+        gap: 20px;
+    }
+
+    .linha-formulario {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .linha-sinopse {
+        grid-template-columns: 1fr;
+    }
+
+    .linha-final {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .btn-cadastrar-livro {
+        grid-column: 1 / -1;
+    }
+
+    .input-formulario {
+        font-size: 13px;
+        padding: 11px;
+    }
+
+    .input-textarea {
+        min-height: 100px;
+    }
+}
+
+
+/* ---------- Celulares (650px) ---------- */
+
+@media (max-width: 650px) {
+
+    .titulo-secao {
+        margin-bottom: 25px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 26px;
+    }
+
+    .subtitulo {
+        font-size: 14px;
+    }
+
+    .pagina-cadastro-livro {
+        max-width: 100%;
+    }
+
+    .formulario-cadastro-livro {
+        padding: 20px;
+        gap: 16px;
+        margin-top: 20px;
+    }
+
+    .linha-formulario {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .linha-sinopse {
+        grid-template-columns: 1fr;
+    }
+
+    .linha-final {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        align-items: stretch;
+    }
+
+    .btn-cadastrar-livro {
+        width: 100%;
+        grid-column: auto;
+    }
+
+    .label-formulario {
+        font-size: 13px;
+    }
+
+    .input-formulario {
+        font-size: 13px;
+        padding: 10px;
+        min-height: 40px;
+    }
+
+    .input-textarea {
+        min-height: 100px;
+    }
+
+    .btn-cadastrar-livro {
+        font-size: 13px;
+        padding: 10px 20px;
+        min-height: 40px;
+    }
+
+    .mensagem-feedback {
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+}
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+/* ---------- Tablets (900px) ---------- */
+
+@media (max-width: 900px) {
+
+    .pagina-emprestar-livro {
+        max-width: 100%;
+    }
+
+    .formulario-emprestar-livro {
+        padding: 25px;
+        gap: 20px;
+    }
+
+    .linha-formulario {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .linha-final {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .btn-emprestar-livro {
+        grid-column: 1 / -1;
+    }
+
+    .input-formulario {
+        font-size: 13px;
+        padding: 11px;
+    }
+}
+
+
+/* ---------- Celulares (650px) ---------- */
+
+@media (max-width: 650px) {
+
+    .titulo-secao {
+        margin-bottom: 25px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 26px;
+    }
+
+    .subtitulo {
+        font-size: 14px;
+    }
+
+    .pagina-emprestar-livro {
+        max-width: 100%;
+    }
+
+    .formulario-emprestar-livro {
+        padding: 20px;
+        gap: 16px;
+        margin-top: 20px;
+    }
+
+    .linha-formulario {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .linha-final {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        align-items: stretch;
+    }
+
+    .btn-emprestar-livro {
+        width: 100%;
+        grid-column: auto;
+    }
+
+    .label-formulario {
+        font-size: 13px;
+    }
+
+    .input-formulario {
+        font-size: 13px;
+        padding: 10px;
+        min-height: 40px;
+    }
+
+    .btn-emprestar-livro {
+        font-size: 13px;
+        padding: 10px 20px;
+        min-height: 40px;
+    }
+
+    .mensagem-feedback {
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+/* ---------- Tablets (900px) ---------- */
+
+@media (max-width: 900px) {
+
+    .pagina-cadastro-usuarios {
+        max-width: 100%;
+    }
+
+    .formulario-cadastro-usuarios {
+        padding: 25px;
+        gap: 18px;
+    }
+
+    .input-formulario {
+        font-size: 13px;
+        padding: 11px;
+    }
+
+    .btn-cadastrar-usuarios {
+        font-size: 13px;
+        padding: 11px 20px;
+        min-height: 40px;
+    }
+}
+
+
+/* ---------- Celulares (650px) ---------- */
+
+@media (max-width: 650px) {
+
+    .titulo-secao {
+        margin-bottom: 25px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 26px;
+    }
+
+    .subtitulo {
+        font-size: 14px;
+    }
+
+    .pagina-cadastro-usuarios {
+        max-width: 100%;
+    }
+
+    .formulario-cadastro-usuarios {
+        padding: 20px;
+        gap: 16px;
+        margin-top: 20px;
+    }
+
+    .label-formulario {
+        font-size: 13px;
+    }
+
+    .input-formulario {
+        font-size: 13px;
+        padding: 10px;
+        min-height: 40px;
+    }
+
+    .btn-cadastrar-usuarios {
+        font-size: 13px;
+        padding: 10px 20px;
+        min-height: 40px;
+        margin-top: 8px;
+    }
+
+    .mensagem-feedback {
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+}
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+/* ---------- Tablets (900px) ---------- */
+
+@media (max-width: 900px) {
+
+    .filtro-usuarios-container {
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 12px;
+    }
+
+    .input-pesquisa-usuarios-wrapper {
+        min-width: 100%;
+    }
+
+    .btn-buscar-usuarios {
+        width: 100%;
+    }
+
+    .tabela-usuarios {
+        font-size: 12px;
+    }
+
+    .tabela-usuarios th,
+    .tabela-usuarios td {
+        padding: 8px 5px;
+    }
+}
+
+
+/* ---------- Celulares (650px) ---------- */
+
+@media (max-width: 650px) {
+
+    .filtro-usuarios {
+        padding: 12px;
+    }
+
+    .filtro-usuarios-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input-pesquisa-usuarios-wrapper {
+        min-width: 100%;
+    }
+
+    .input-pesquisa-usuarios {
+        font-size: 13px;
+        padding: 9px 10px 9px 36px;
+    }
+
+    .icon-pesquisa {
+        left: 10px;
+        font-size: 14px;
+    }
+
+    .btn-buscar-usuarios {
+        width: 100%;
+        font-size: 13px;
+        padding: 9px 20px;
+    }
+
+    .tabela-usuarios-container {
+        padding: 8px;
+        overflow-x: auto;
+    }
+
+    .tabela-usuarios {
+        font-size: 11px;
+        min-width: 500px;
+    }
+
+    .tabela-usuarios th,
+    .tabela-usuarios td {
+        padding: 6px 4px;
+    }
+
+    .paginacao-usuarios {
+        gap: 6px;
+        margin-top: 15px;
+    }
+
+    .btn-paginacao-usuarios,
+    .numero-pagina-usuarios {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+}
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+/* ---------- Tablets (900px) ---------- */
+
+@media (max-width: 900px) {
+
+    .header {
+        width: 190px;
+    }
+
+    .sidebar {
+        width: 190px;
+    }
+
+    .conteudo-principal {
+        margin-left: 190px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .nav-link,
+    .btn-sair {
+        padding-left: 55px;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    .cards-metricas {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .card {
+        min-height: 110px;
+    }
+
+    .cards-metricas-relatorio {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .card-relatorio {
+        min-height: 130px;
+    }
 
     .filtros-container {
         flex-direction: column;
@@ -1126,12 +2778,90 @@ body {
     .tabela-livros td {
         padding: 8px 5px;
     }
+
+    .filtros-relatorio-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .filtro-relatorio-item {
+        min-width: 100%;
+    }
+
+    .btn-gerar-relatorio {
+        width: 100%;
+    }
+
+    .acoes-relatorio {
+        flex-direction: column;
+    }
+
+    .btn-exportar,
+    .btn-imprimir {
+        width: 100%;
+    }
 }
 
 
 /* ---------- Celulares (650px) ---------- */
 
 @media (max-width: 650px) {
+
+    .header {
+        position: relative;
+
+        width: 100%;
+        height: 70px;
+
+        border-right: none;
+    }
+
+    .header-content {
+        justify-content: center;
+    }
+
+    .sidebar {
+        position: relative;
+
+        top: auto;
+        bottom: auto;
+
+        width: 100%;
+        height: auto;
+
+        border-right: none;
+        border-bottom: 1px solid #cfd3d8;
+
+        padding: 5px 0;
+    }
+
+    .nav-menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-link {
+        min-height: 40px;
+
+        padding: 8px 10px;
+
+        justify-content: center;
+        text-align: center;
+    }
+
+    .btn-sair {
+        margin-top: 5px;
+
+        padding: 10px;
+
+        text-align: center;
+    }
+
+    .conteudo-principal {
+        margin-left: 0;
+
+        padding: 30px 12px;
+    }
 
     .titulo-secao {
         margin-bottom: 25px;
@@ -1143,6 +2873,36 @@ body {
 
     .subtitulo {
         font-size: 14px;
+    }
+
+    .cards-metricas {
+        grid-template-columns: 1fr;
+    }
+
+    .emprestimos-recentes {
+        overflow-x: auto;
+    }
+
+    .tabela-emprestimos {
+        min-width: 650px;
+    }
+
+    .cards-metricas-relatorio {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .card-relatorio {
+        min-height: 110px;
+    }
+
+    .card-icon-relatorio {
+        font-size: 28px;
+    }
+
+    .card-numero-relatorio,
+    .card-numero-relatorio-destaque {
+        font-size: 32px;
     }
 
     .filtros-container {
@@ -1182,22 +2942,5 @@ body {
         padding: 6px 4px;
     }
 
-    .badge-disponivel,
-    .badge-indisponivel {
-        min-width: 70px;
-        padding: 3px 6px;
-        font-size: 11px;
-    }
-
-    .paginacao-container {
-        gap: 6px;
-        margin-top: 15px;
-    }
-
-    .btn-paginacao,
-    .numero-pagina {
-        width: 32px;
-        height: 32px;
-        font-size: 12px;
-    }
 }
+

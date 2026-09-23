@@ -1,11 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Biblio-Tech - Cadastrar Usuário</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    
+    <div class="container-principal">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">📚</span>
+                    <h1>Biblio-Tech</h1>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main layout: Sidebar + Conteúdo -->
+        <div class="layout">
+            <!-- Navegação Lateral -->
+            <nav class="sidebar">
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="nav-link"><img src="../assets/icons/logo_home.png" alt="home" class="home-icon">Início</a></li>
+                    <li><a href="catalogo-livros.html" class="nav-link"><img src="../assets/icons/livros.png" alt="livros" class="livros-icon">Livros</a></li>
+                    <li><a href="consulta.html" class="nav-link"><img src="../assets/icons/setinha.png" alt="setinha" class="setinha-icon">Consulta</a></li>
+                    <li><a href="usuarios-cadastrados.html" class="nav-link"><img src="../assets/icons/usuarios.png" alt="users" class="users-icon">Usuários</a></li>
+                    <li><a href="cadastro-usuarios.html" class="nav-link ativo"><img src="../assets/icons/cadastro.png" alt="Cadastro User" class="cad-user-icon">Cadastrar Usuário</a></li>
+                    <li><a href="emprestimos.html" class="nav-link"><img src="../assets/icons/empréstimo.png" alt="emprestimo" class="emprestimo-icon">Emprestar Livro</a></li>
+                    <li><a href="cadastro-livros.html" class="nav-link"><img src="../assets/icons/cadastrar-livro.png" alt="cad-livro" class="cad-livro-icon">Cadastrar Livro</a></li>
+                    <li><a href="devolucao.html" class="nav-link"><img src="../assets/icons/setinha_verde.png" alt="devolver-icon" class="devolver-icon">Devolver Livro</a></li>
+                </ul>
+                <button class="btn-sair">Sair</button>
+            </nav>
+
+            <!-- Conteúdo Principal -->
+            <main class="conteudo-principal">
+                <section class="pagina-cadastro-usuarios">
+                    <!-- Título da página -->
+                    <div class="titulo-secao">
+                        <h2>Cadastrar Usuário</h2>
+                        <p class="subtitulo">Preencha os dados do Aluno/Usuário</p>
+                    </div>
+
+                    <!-- Formulário -->
+                    <form class="formulario-cadastro-usuarios" id="formulario-cadastro-usuarios">
+                        <!-- Campo Nome -->
+                        <div class="grupo-formulario">
+                            <label for="input-nome" class="label-formulario">Nome</label>
+                            <input 
+                                type="text" 
+                                id="input-nome" 
+                                class="input-formulario" 
+                                placeholder="Digite o nome"
+                                required
+                            >
+                        </div>
+
+                        <!-- Campo Email -->
+                        <div class="grupo-formulario">
+                            <label for="input-email" class="label-formulario">E-mail</label>
+                            <input 
+                                type="email" 
+                                id="input-email" 
+                                class="input-formulario" 
+                                placeholder="Digite o email"
+                                required
+                            >
+                        </div>
+
+                        <!-- Botão Cadastrar -->
+                        <button type="submit" class="btn-cadastrar-usuarios">Cadastrar-se</button>
+                    </form>
+
+                    <!-- Mensagem de Erro/Sucesso -->
+                    <div id="mensagem-feedback" class="mensagem-feedback" style="display: none;"></div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
 </body>
 </html>

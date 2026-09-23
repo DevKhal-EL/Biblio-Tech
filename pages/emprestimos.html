@@ -1,11 +1,194 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Biblio-Tech - Emprestar Livro</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    
+    <div class="container-principal">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">📚</span>
+                    <h1>Biblio-Tech</h1>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main layout: Sidebar + Conteúdo -->
+        <div class="layout">
+            <!-- Navegação Lateral -->
+            <nav class="sidebar">
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="nav-link"><img src="../assets/icons/logo_home.png" alt="home" class="home-icon">Início</a></li>
+                    <li><a href="catalogo-livros.html" class="nav-link"><img src="../assets/icons/livros.png" alt="livros" class="livros-icon">Livros</a></li>
+                    <li><a href="consulta.html" class="nav-link"><img src="../assets/icons/setinha.png" alt="setinha" class="setinha-icon">Consulta</a></li>
+                    <li><a href="usuarios-cadastrados.html" class="nav-link"><img src="../assets/icons/usuarios.png" alt="users" class="users-icon">Usuários</a></li>
+                    <li><a href="cadastro-usuarios.html" class="nav-link"><img src="../assets/icons/cadastro.png" alt="Cadastro User" class="cad-user-icon">Cadastrar Usuário</a></li>
+                    <li><a href="emprestimos.html" class="nav-link ativo"><img src="../assets/icons/empréstimo.png" alt="emprestimo" class="emprestimo-icon">Emprestar Livro</a></li>
+                    <li><a href="cadastro-livros.html" class="nav-link"><img src="../assets/icons/cadastrar-livro.png" alt="cad-livro" class="cad-livro-icon">Cadastrar Livro</a></li>
+                    <li><a href="devolucao.html" class="nav-link"><img src="../assets/icons/setinha_verde.png" alt="devolver-icon" class="devolver-icon">Devolver Livro</a></li>
+                </ul>
+                <button class="btn-sair">Sair</button>
+            </nav>
+
+            <!-- Conteúdo Principal -->
+            <main class="conteudo-principal">
+                <section class="pagina-emprestar-livro">
+                    <!-- Título da página -->
+                    <div class="titulo-secao">
+                        <h2>Emprestar Livro</h2>
+                        <p class="subtitulo">Preencha os dados do livro e do usuário</p>
+                    </div>
+
+                    <!-- Formulário -->
+                    <form class="formulario-emprestar-livro" id="formulario-emprestar-livro">
+                        <!-- Linha 1: Título, Autor, ISBN -->
+                        <div class="linha-formulario">
+                            <div class="grupo-formulario">
+                                <label for="input-titulo" class="label-formulario">Título</label>
+                                <input 
+                                    type="text" 
+                                    id="input-titulo" 
+                                    class="input-formulario" 
+                                    placeholder="Digite o título do livro"
+                                    required
+                                >
+                            </div>
+
+                            <div class="grupo-formulario">
+                                <label for="input-autor" class="label-formulario">Autor</label>
+                                <input 
+                                    type="text" 
+                                    id="input-autor" 
+                                    class="input-formulario" 
+                                    placeholder="Digite o autor do livro"
+                                    required
+                                >
+                            </div>
+
+                            <div class="grupo-formulario">
+                                <label for="input-isbn" class="label-formulario">ISBN</label>
+                                <input 
+                                    type="text" 
+                                    id="input-isbn" 
+                                    class="input-formulario" 
+                                    placeholder="Digite o ISBN do livro"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Linha 2: Editora, Ano de Publicação, Categoria -->
+                        <div class="linha-formulario">
+                            <div class="grupo-formulario">
+                                <label for="input-editora" class="label-formulario">Editora</label>
+                                <input 
+                                    type="text" 
+                                    id="input-editora" 
+                                    class="input-formulario" 
+                                    placeholder="Digite a Editora do livro"
+                                    required
+                                >
+                            </div>
+
+                            <div class="grupo-formulario">
+                                <label for="input-ano" class="label-formulario">Ano de Publicação</label>
+                                <input 
+                                    type="number" 
+                                    id="input-ano" 
+                                    class="input-formulario" 
+                                    placeholder="Digite o ano do livro"
+                                    required
+                                >
+                            </div>
+
+                            <div class="grupo-formulario">
+                                <label for="input-categoria" class="label-formulario">Categoria</label>
+                                <input 
+                                    type="text" 
+                                    id="input-categoria" 
+                                    class="input-formulario" 
+                                    placeholder="Digite a categoria do livro"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Linha 3: Data Empréstimo, Nome Usuário, Email Usuário -->
+                        <div class="linha-formulario">
+                            <div class="grupo-formulario">
+                                <label for="input-data-emprestimo" class="label-formulario">Data Empréstimo</label>
+                                <input 
+                                    type="text" 
+                                    id="input-data-emprestimo" 
+                                    class="input-formulario" 
+                                    placeholder="DD-MM-YYYY"
+                                    required
+                                >
+                            </div>
+
+                            <div class="grupo-formulario">
+                                <label for="input-nome-usuario" class="label-formulario">Nome Usuário</label>
+                                <input 
+                                    type="text" 
+                                    id="input-nome-usuario" 
+                                    class="input-formulario" 
+                                    placeholder="Digite o nome do usuário"
+                                    required
+                                >
+                            </div>
+
+                            <div class="grupo-formulario">
+                                <label for="input-email-usuario" class="label-formulario">Email Usuário</label>
+                                <input 
+                                    type="email" 
+                                    id="input-email-usuario" 
+                                    class="input-formulario" 
+                                    placeholder="Digite o email do usuário"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Linha 4: Localização, Data Devolução, Botão -->
+                        <div class="linha-formulario linha-final">
+                            <div class="grupo-formulario">
+                                <label for="input-localizacao" class="label-formulario">Localização</label>
+                                <input 
+                                    type="text" 
+                                    id="input-localizacao" 
+                                    class="input-formulario" 
+                                    placeholder="Ex: Estante 1 - Prateleira 2"
+                                    required
+                                >
+                            </div>
+
+                            <div class="grupo-formulario">
+                                <label for="input-data-devolucao" class="label-formulario">Data Devolução</label>
+                                <input 
+                                    type="text" 
+                                    id="input-data-devolucao" 
+                                    class="input-formulario" 
+                                    placeholder="DD-MM-YYYY"
+                                    required
+                                >
+                            </div>
+
+                            <button type="submit" class="btn-emprestar-livro">Emprestar Livro</button>
+                        </div>
+                    </form>
+
+                    <!-- Mensagem de Erro/Sucesso -->
+                    <div id="mensagem-feedback" class="mensagem-feedback" style="display: none;"></div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
 </body>
 </html>

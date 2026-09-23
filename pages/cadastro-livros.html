@@ -1,26 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biblio-Tech</title>
+    <title>Biblio-Tech - Cadastrar Livro</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-                <!-- Navegação Lateral -->
+    <div class="container-principal">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">📚</span>
+                    <h1>Biblio-Tech</h1>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main layout: Sidebar + Conteúdo -->
+        <div class="layout">
+            <!-- Navegação Lateral -->
             <nav class="sidebar">
                 <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link ativo"><img src="assets/icons/logo_home.png" alt="home" class="home-icon">Início</a></li>
-                    <li><a href="pages/catalogo-livros.html" class="nav-link">Livros</a></li>
-                    <li><a href="pages/consulta.html" class="nav-link">Consulta</a></li>
-                    <li><a href="pages/usuarios-cadastrados.html" class="nav-link">Usuários</a></li>
-                    <li><a href="pages/cadastro-usuarios.html" class="nav-link">Cadastrar Usuário</a></li>
-                    <li><a href="pages/emprestimos.html" class="nav-link">Emprestar Livro</a></li>
-                    <li><a href="pages/cadastro-livros.html" class="nav-link">Cadastrar Livro</a></li>
-                    <li><a href="pages/devolucao.html" class="nav-link">Devolver Livro</a></li>
+                    <li><a href="../index.html" class="nav-link"><img src="../assets/icons/logo_home.png" alt="home" class="home-icon">Início</a></li>
+                    <li><a href="catalogo-livros.html" class="nav-link"><img src="../assets/icons/livros.png" alt="livros" class="livros-icon">Livros</a></li>
+                    <li><a href="consulta.html" class="nav-link"><img src="../assets/icons/setinha.png" alt="setinha" class="setinha-icon">Consulta</a></li>
+                    <li><a href="usuarios-cadastrados.html" class="nav-link"><img src="../assets/icons/usuarios.png" alt="users" class="users-icon">Usuários</a></li>
+                    <li><a href="cadastro-usuarios.html" class="nav-link"><img src="../assets/icons/cadastro.png" alt="Cadastro User" class="cad-user-icon">Cadastrar Usuário</a></li>
+                    <li><a href="emprestimos.html" class="nav-link"><img src="../assets/icons/empréstimo.png" alt="emprestimo" class="emprestimo-icon">Emprestar Livro</a></li>
+                    <li><a href="cadastro-livros.html" class="nav-link ativo"><img src="../assets/icons/cadastrar-livro.png" alt="cad-livro" class="cad-livro-icon">Cadastrar Livro</a></li>
+                    <li><a href="devolucao.html" class="nav-link"><img src="../assets/icons/setinha_verde.png" alt="devolver-icon" class="devolver-icon">Devolver Livro</a></li>
                 </ul>
                 <button class="btn-sair">Sair</button>
             </nav>
-    
+
+            <!-- Conteúdo Principal -->
+            <main class="conteudo-principal">
+                <section class="pagina-cadastro-livro">
+                    <!-- Título da página -->
+                    <div class="titulo-secao">
+                        <h2>Cadastro De Livro</h2>
+                        <p class="subtitulo">Preencha os dados do livro</p>
+                    </div>
+
+                    <!-- Formulário -->
+                    <form class="formulario-cadastro-livro" id="formulario-cadastro-livro">
+                        <!-- Linha 1: Título, Autor, ISBN -->
+                        <div class="linha-formulario">
+                            <div class="grupo-formulario">
+                                <label for="input-titulo" class="label-formulario">Título</label>
+                                <input 
+                                    type="text" 
+                                    id="input-titulo" 
+                                    class="input-formulario" 
+                                    placeholder="Digite o título do livro"
+                                    required
+                                >
+                            </div>
+
+                            <div class="grupo-formulario">
+                                <label for="input-autor" class="label-formulario">Autor</label>
+                                <input 
+                                    type="text" 
+                                    id="input-autor" 
+                                    class="input-formulario" 
+                                    placeholder="Digite o autor do livro"
+                                    required
+                                >
+                            </div>
+
+                            <div class="grupo-formulario">
+                                <label for="input-isbn" class="label-formulario">ISBN</label>
+                                <input 
+                                    type="text" 
+                                    id="input-isbn" 
+                                    class="input-formulario" 
+                                    placeholder="Digite o ISBN do livro"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Linha 2: Editora, Ano de Publicação, Categoria -->
+                        <div class="linha-formulario">
+                            <div class="grupo-formulario">
+                                <label for="input-editora" class="label-formulario">Editora</label>
+                                <input 
+                                    type="text" 
+                                    id="input-editora" 
+                                    class="input-formulario" 
+                                    placeholder="Digite a Editora do livro"
+                                    required
+                                >
+                            </div>
+
+                            <div class="grupo-formulario">
+                                <label for="input-ano" class="label-formulario">Ano de Publicação</label>
+                                <input 
+                                    type="number" 
+                                    id="input-ano" 
+                                    class="input-formulario" 
+                                    placeholder="Digite o ano do livro"
+                                    required
+                                >
+                            </div>
+
+                            <div class="grupo-formulario">
+                                <label for="input-categoria" class="label-formulario">Categoria</label>
+                                <input 
+                                    type="text" 
+                                    id="input-categoria" 
+                                    class="input-formulario" 
+                                    placeholder="Digite a categoria do livro"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Linha 3: Sinopse (campo maior, 3 colunas) -->
+                        <div class="linha-formulario linha-sinopse">
+                            <div class="grupo-formulario grupo-sinopse">
+                                <label for="input-sinopse" class="label-formulario">Sinopse</label>
+                                <textarea 
+                                    id="input-sinopse" 
+                                    class="input-formulario input-textarea" 
+                                    placeholder="Digite a sinopse do livro"
+                                    required
+                                ></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Linha 4: Quantidade, Localização, Botão -->
+                        <div class="linha-formulario linha-final">
+                            <div class="grupo-formulario">
+                                <label for="input-quantidade" class="label-formulario">Quantidade</label>
+                                <input 
+                                    type="number" 
+                                    id="input-quantidade" 
+                                    class="input-formulario" 
+                                    placeholder="Ex: 1"
+                                    min="1"
+                                    required
+                                >
+                            </div>
+
+                            <div class="grupo-formulario">
+                                <label for="input-localizacao" class="label-formulario">Localização</label>
+                                <input 
+                                    type="text" 
+                                    id="input-localizacao" 
+                                    class="input-formulario" 
+                                    placeholder="Ex: Estante 1 - Prateleira 2"
+                                    required
+                                >
+                            </div>
+
+                            <button type="submit" class="btn-cadastrar-livro">Cadastrar Livro</button>
+                        </div>
+                    </form>
+
+                    <!-- Mensagem de Erro/Sucesso -->
+                    <div id="mensagem-feedback" class="mensagem-feedback" style="display: none;"></div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
 </body>
 </html>

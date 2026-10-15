@@ -135,11 +135,8 @@ const [livros] = await pool.query('SELECT * FROM livros');
 - O `console.log("Connected!")` aparece mesmo se o banco não conectar, porque o pool só abre a conexão de verdade quando faz a primeira consulta.
 
 ---
-## Feat Charlinho 03/10:
 
-
-
-**## Feat Henrique 05/10:**
+## Feat Henrique 05/10:**
 
 - Começamos a reconstruir o JavaScript da página de cadastro do zero, descartando o JS antigo para evitar código desnecessário e facilitar a organização do projeto.
 
@@ -167,6 +164,19 @@ const email = document.getElementById("input-email").value;
 - Inicialmente seria utilizado `localStorage` para armazenar os dados, mas decidimos não seguir por esse caminho, pois o objetivo do projeto é utilizar o banco de dados SQL. Assim, evitamos implementar uma solução temporária que posteriormente precisaria ser removida.
 
 - O próximo passo será fazer o JavaScript do frontend enviar os dados para um backend, que ficará responsável por realizar a comunicação com o MySQL/MariaDB e inserir os usuários no banco de dados.
+
+---
+## Feat Charlinho: 15/10/2026
+
+- Modelagem de Dados Conceitual, Lógica e Física
+- Documentação da Modelagem de Dados Conceitual, Lógica e Física em ../docs/Modelagem_De_Dados
+- Criação do Schema.sql que será o banco de dados para o backend no projeto.
+
+Próximos passos:
+
+- Testar a integridade do banco de dados fazendo registros válidos e inválidos no mysql, pra ver se está funcionando.
+
+
 
 
 

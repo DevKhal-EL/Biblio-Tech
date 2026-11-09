@@ -1,0 +1,20 @@
+# ADR-001 — Utilização de banco de dados SQL em vez de localStorage
+
+## Contexto
+
+Durante o desenvolvimento da página de cadastro, foi considerada a utilização do `localStorage` para armazenar os dados preenchidos pelo usuário.
+
+Entretanto, o objetivo do projeto é trabalhar com persistência de dados utilizando um banco de dados SQL, integrado ao backend.
+
+## Decisão
+
+Não utilizar `localStorage` como solução de armazenamento dos cadastros.
+
+Os dados deverão ser enviados pelo frontend ao backend, que será responsável por realizar as operações no banco de dados.
+
+## Consequências
+
+- Será necessário implementar a comunicação entre frontend e backend.
+- O backend ficará responsável pela validação e persistência dos dados.
+- A aplicação utilizará o banco de dados SQL como fonte de armazenamento dos registros.
+- Evitaremos implementar uma solução temporária que posteriormente precisaria ser substituída.

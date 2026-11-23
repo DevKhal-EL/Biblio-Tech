@@ -1407,9 +1407,10 @@ body {
 /* ---------- Grupo do Formulário ---------- */
 
 .grupo-formulario {
-    display: flex;
+    display: block;
     flex-direction: column;
     gap: 8px;
+    box-sizing: border-box;
 }
 
 
@@ -1442,6 +1443,8 @@ body {
     transition: all 0.2s ease;
 
     min-height: 42px;
+
+    display: block;
 }
 
 .input-formulario::placeholder {

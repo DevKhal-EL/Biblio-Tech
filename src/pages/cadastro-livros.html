@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biblio-Tech - Emprestar Livro</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Biblio-Tech - Cadastrar Livro</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <div class="container-principal">
@@ -23,29 +23,29 @@
             <!-- Navegação Lateral -->
             <nav class="sidebar">
                 <ul class="nav-menu">
-                    <li><a href="../index.html" class="nav-link"><img src="../assets/icons/logo_home.png" alt="home" class="home-icon">Início</a></li>
-                    <li><a href="catalogo-livros.html" class="nav-link"><img src="../assets/icons/livros.png" alt="livros" class="livros-icon">Livros</a></li>
-                    <li><a href="consulta.html" class="nav-link"><img src="../assets/icons/setinha.png" alt="setinha" class="setinha-icon">Consulta</a></li>
-                    <li><a href="usuarios-cadastrados.html" class="nav-link"><img src="../assets/icons/usuarios.png" alt="users" class="users-icon">Usuários</a></li>
-                    <li><a href="cadastro-usuarios.html" class="nav-link"><img src="../assets/icons/cadastro.png" alt="Cadastro User" class="cad-user-icon">Cadastrar Usuário</a></li>
-                    <li><a href="emprestimos.html" class="nav-link ativo"><img src="../assets/icons/empréstimo.png" alt="emprestimo" class="emprestimo-icon">Emprestar Livro</a></li>
-                    <li><a href="cadastro-livros.html" class="nav-link"><img src="../assets/icons/cadastrar-livro.png" alt="cad-livro" class="cad-livro-icon">Cadastrar Livro</a></li>
-                    <li><a href="devolucao.html" class="nav-link"><img src="../assets/icons/setinha_verde.png" alt="devolver-icon" class="devolver-icon">Devolver Livro</a></li>
+                    <li><a href="../index.html" class="nav-link"><img src="../../assets/icons/logo_home.png" alt="home" class="home-icon">Início</a></li>
+                    <li><a href="catalogo-livros.html" class="nav-link"><img src="../../assets/icons/livros.png" alt="livros" class="livros-icon">Livros</a></li>
+                    <li><a href="consulta.html" class="nav-link"><img src="../../assets/icons/setinha.png" alt="setinha" class="setinha-icon">Consulta</a></li>
+                    <li><a href="usuarios-cadastrados.html" class="nav-link"><img src="../../assets/icons/usuarios.png" alt="users" class="users-icon">Usuários</a></li>
+                    <li><a href="cadastro-usuarios.html" class="nav-link"><img src="../../assets/icons/cadastro.png" alt="Cadastro User" class="cad-user-icon">Cadastrar Usuário</a></li>
+                    <li><a href="emprestimos.html" class="nav-link"><img src="../../assets/icons/empréstimo.png" alt="emprestimo" class="emprestimo-icon">Emprestar Livro</a></li>
+                    <li><a href="cadastro-livros.html" class="nav-link ativo"><img src="../../assets/icons/cadastrar-livro.png" alt="cad-livro" class="cad-livro-icon">Cadastrar Livro</a></li>
+                    <li><a href="devolucao.html" class="nav-link"><img src="../../assets/icons/setinha_verde.png" alt="devolver-icon" class="devolver-icon">Devolver Livro</a></li>
                 </ul>
                 <button class="btn-sair">Sair</button>
             </nav>
 
             <!-- Conteúdo Principal -->
             <main class="conteudo-principal">
-                <section class="pagina-emprestar-livro">
+                <section class="pagina-cadastro-livro">
                     <!-- Título da página -->
                     <div class="titulo-secao">
-                        <h2>Emprestar Livro</h2>
-                        <p class="subtitulo">Preencha os dados do livro e do usuário</p>
+                        <h2>Cadastro De Livro</h2>
+                        <p class="subtitulo">Preencha os dados do livro</p>
                     </div>
 
                     <!-- Formulário -->
-                    <form class="formulario-emprestar-livro" id="formulario-emprestar-livro">
+                    <form class="formulario-cadastro-livro" id="formulario-cadastro-livro">
                         <!-- Linha 1: Título, Autor, ISBN -->
                         <div class="linha-formulario">
                             <div class="grupo-formulario">
@@ -118,44 +118,33 @@
                             </div>
                         </div>
 
-                        <!-- Linha 3: Data Empréstimo, Nome Usuário, Email Usuário -->
-                        <div class="linha-formulario">
-                            <div class="grupo-formulario">
-                                <label for="input-data-emprestimo" class="label-formulario">Data Empréstimo</label>
-                                <input 
-                                    type="text" 
-                                    id="input-data-emprestimo" 
-                                    class="input-formulario" 
-                                    placeholder="DD-MM-YYYY"
+                        <!-- Linha 3: Sinopse (campo maior, 3 colunas) -->
+                        <div class="linha-formulario linha-sinopse">
+                            <div class="grupo-formulario grupo-sinopse">
+                                <label for="input-sinopse" class="label-formulario">Sinopse</label>
+                                <textarea 
+                                    id="input-sinopse" 
+                                    class="input-formulario input-textarea" 
+                                    placeholder="Digite a sinopse do livro"
                                     required
-                                >
-                            </div>
-
-                            <div class="grupo-formulario">
-                                <label for="input-nome-usuario" class="label-formulario">Nome Usuário</label>
-                                <input 
-                                    type="text" 
-                                    id="input-nome-usuario" 
-                                    class="input-formulario" 
-                                    placeholder="Digite o nome do usuário"
-                                    required
-                                >
-                            </div>
-
-                            <div class="grupo-formulario">
-                                <label for="input-email-usuario" class="label-formulario">Email Usuário</label>
-                                <input 
-                                    type="email" 
-                                    id="input-email-usuario" 
-                                    class="input-formulario" 
-                                    placeholder="Digite o email do usuário"
-                                    required
-                                >
+                                ></textarea>
                             </div>
                         </div>
 
-                        <!-- Linha 4: Localização, Data Devolução, Botão -->
+                        <!-- Linha 4: Quantidade, Localização, Botão -->
                         <div class="linha-formulario linha-final">
+                            <div class="grupo-formulario">
+                                <label for="input-quantidade" class="label-formulario">Quantidade</label>
+                                <input 
+                                    type="number" 
+                                    id="input-quantidade" 
+                                    class="input-formulario" 
+                                    placeholder="Ex: 1"
+                                    min="1"
+                                    required
+                                >
+                            </div>
+
                             <div class="grupo-formulario">
                                 <label for="input-localizacao" class="label-formulario">Localização</label>
                                 <input 
@@ -167,18 +156,7 @@
                                 >
                             </div>
 
-                            <div class="grupo-formulario">
-                                <label for="input-data-devolucao" class="label-formulario">Data Devolução</label>
-                                <input 
-                                    type="text" 
-                                    id="input-data-devolucao" 
-                                    class="input-formulario" 
-                                    placeholder="DD-MM-YYYY"
-                                    required
-                                >
-                            </div>
-
-                            <button type="submit" class="btn-emprestar-livro">Emprestar Livro</button>
+                            <button type="submit" class="btn-cadastrar-livro">Cadastrar Livro</button>
                         </div>
                     </form>
 
